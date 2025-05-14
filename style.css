@@ -12,7 +12,7 @@ body {
 
 /* Estilizando a logo no cabeçalho */
   .logo img {
-  width: 250px; /* Tamanho da logo, você pode ajustar conforme necessário */
+  width: auto; /* Tamanho da logo, você pode ajustar conforme necessário */
   height: auto;
   display: block;
 }
