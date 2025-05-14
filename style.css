@@ -1,0 +1,420 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+/* Estilizando a logo no cabeçalho */
+  .logo img {
+  width: 250px; /* Tamanho da logo, você pode ajustar conforme necessário */
+  height: auto;
+  display: block;
+}
+
+/* Cabeçalho */
+header {
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+
+.logo {
+  font-size: 32px;
+  color: #c4170c;
+  font-weight: 700;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* INICIO DO CARROSSEL */
+.carrossel-destaques {
+  margin-bottom: 40px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.carrossel-titulo {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #c4170c;
+  text-transform: uppercase;
+}
+
+.carrossel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carrossel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.carrossel::-webkit-scrollbar {
+  display: none;
+}
+
+.destaque {
+  min-width: 300px;
+  max-width: 400px;
+  flex: 0 0 auto;
+  background: #f5f5f5;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.destaque img {
+  width: 100%;
+  height: auto;
+}
+
+.destaque p {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+.slide-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.slide-content p {
+  font-size: 14px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+/* FIM DO CARROSSEL */
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/*ULTIMAS NOTICIAS*/
+.news-ticker {
+  display: flex;
+  align-items: center;
+  background-color: #c0392b; /* vermelho escuro */
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  overflow: hidden;
+  padding: 10px 0;
+  border-bottom: 4px solid #a93226;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 99;
+}
+
+.ticker-label {
+  padding: 0 15px;
+  white-space: nowrap;
+  background-color: #922b21;
+  font-size: 15px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.ticker-wrapper {
+  overflow: hidden;
+  position: relative;
+  flex: 1;
+}
+
+.ticker-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 15s linear infinite;
+}
+
+.ticker-content span {
+  margin-right: 50px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.ticker-wrapper:hover .ticker-content {
+  animation-play-state: paused;
+}
+
+/*FIM DE ULTIMAS NOTICIAS*/
+
+.datetime {
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+  padding: 5px 15px;
+  font-weight: 500;
+}
+
+
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+nav a:hover {
+  color: #666; /* tom de cinza mais claro */
+  transition: color 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 15px;
+}
+
+.banner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px 15px;
+  background-color: #f9f9f9;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.banner-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+/* EFEITO HOVER NAS IMAGENS DO BANNER */
+.banner-grid img:hover {
+  transform: scale(1.05);
+  filter: brightness(90%);
+  cursor: pointer;
+}
+  
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.03);
+  filter: brightness(90%);
+  cursor: pointer;
+}
+
+.card h2,
+.card h3,
+.card p {
+  padding: 15px;
+}
+
+.card h2,
+.card h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card h2:hover,
+.card h3:hover {
+  color: #c4170c;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.card p {
+  font-size: 14px;
+  color: #444;
+}
+
+.ads {
+  background: #dcdcdc;
+  height: auto;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #555;
+  padding: 10px;
+}
+
+.ads img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Adicionando estilo para os ícones sociais */
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  text-decoration: none;
+  font-size: 24px;
+  color: #222;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #c4170c;  /* Cor de destaque ao passar o mouse */
+}
+
+footer {
+  background: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer {
+  background: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+  }
+  nav.active {
+    display: flex;
+  }
+  @media (max-width: 768px) {
+      .logo-img {
+        max-width: 150px;
+      }
+    }
+}
