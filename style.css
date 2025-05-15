@@ -363,6 +363,178 @@ nav a:hover {
   height: auto;
 }
 
+/*CONTATO*/
+.contact-section {
+  margin: 40px 0;
+  padding: 0 15px;
+}
+
+.contact-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-form {
+  flex: 1 1 500px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 600px;
+}
+
+.contact-form h2 {
+  font-size: 24px;
+  color: #c4170c;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #c4170c;
+  outline: none;
+}
+
+.contact-form button {
+  background: #c4170c;
+  color: white;
+  padding: 12px;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  align-self: flex-start;
+}
+
+.contact-form button:hover {
+  background: #a7140a;
+  transform: scale(1.02);
+}
+
+.contact-ads {
+  flex: 1 1 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #dcdcdc;
+  border-radius: 12px;
+  padding: 15px;
+  max-width: 600px;
+}
+
+.contact-ads img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.contact-ads {
+  flex: 1 1 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.ads-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 100%;
+}
+
+.ads-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #c4170c;
+}
+
+.ads-text {
+  font-size: 15px;
+  color: #333;
+}
+
+.ads-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #c4170c;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.ads-button:hover {
+  background-color: #a7140a;
+}
+
+.ads-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.ads-image:hover {
+  transform: scale(1.05);
+}
+
+
+
+/* Whatsapp */
+.whatsapp-float {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 28px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 1000;
+  line-height: 50px;
+  transition: background 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebc5a;
+}
+
+
 /* Adicionando estilo para os ícones sociais */
 .social-media {
   display: flex;
